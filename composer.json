@@ -1,0 +1,17 @@
+{
+	"name": "bayrell/common",
+	"type": "library",
+	"description": "Bayrell Common",
+	"version": "0.5.0",
+	"authors": [
+		{
+			"name": "Ildar Bikmamatov",
+			"email": "support@bayrell.org"
+		}
+	],
+	"autoload": {
+		"psr-4": { "BayrellCommon\\": "" }
+	},
+	"require": {
+	}
+}
