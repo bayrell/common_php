@@ -20,6 +20,7 @@ namespace BayrellCommon\FileSystem;
 use Runtime\rtl;
 use Runtime\Map;
 use Runtime\Vector;
+use Runtime\IntrospectionInfo;
 interface FileInterface{
 	/**
 	 * Returns stream
@@ -33,4 +34,5 @@ interface FileInterface{
 	 * Close files
 	 */
 	function close();
+	/* ======================= Class Init Functions ======================= */
 }

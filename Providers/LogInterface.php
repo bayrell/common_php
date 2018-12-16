@@ -20,6 +20,7 @@ namespace BayrellCommon\Providers;
 use Runtime\rtl;
 use Runtime\Map;
 use Runtime\Vector;
+use Runtime\IntrospectionInfo;
 /**
  * Provider "default:log" 
  */
@@ -32,4 +33,5 @@ interface LogInterface{
 	 * Log exception
 	 */
 	function logException($level, $module_name, $e);
+	/* ======================= Class Init Functions ======================= */
 }

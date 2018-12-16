@@ -20,6 +20,7 @@ namespace BayrellCommon\FileSystem;
 use Runtime\rtl;
 use Runtime\Map;
 use Runtime\Vector;
+use Runtime\IntrospectionInfo;
 interface FileSystemInterface{
 	/**
 	 * Returns files and folders from directory
@@ -72,4 +73,5 @@ interface FileSystemInterface{
 	 * @param boolean 
 	 */
 	function isDir($path);
+	/* ======================= Class Init Functions ======================= */
 }

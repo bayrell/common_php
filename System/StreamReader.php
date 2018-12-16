@@ -20,17 +20,11 @@ namespace BayrellCommon\System;
 use Runtime\rtl;
 use Runtime\Map;
 use Runtime\Vector;
+use Runtime\IntrospectionInfo;
 use Runtime\CoreObject;
 class StreamReader extends CoreObject{
 	protected $stream;
 	protected $charset;
-	public function getClassName(){return "BayrellCommon.System.StreamReader";}
-	public static function getParentClassName(){return "Runtime.CoreObject";}
-	protected function _init(){
-		parent::_init();
-		$this->stream = null;
-		$this->charset = "utf8";
-	}
 	/**
 	 * Create object
 	 */
@@ -94,5 +88,13 @@ class StreamReader extends CoreObject{
 		}
 		$s = $Utils::bytesToString($res, $this->charset);
 		return $s;
+	}
+	/* ======================= Class Init Functions ======================= */
+	public function getClassName(){return "BayrellCommon.System.StreamReader";}
+	public static function getParentClassName(){return "Runtime.CoreObject";}
+	protected function _init(){
+		parent::_init();
+		$this->stream = null;
+		$this->charset = "utf8";
 	}
 }

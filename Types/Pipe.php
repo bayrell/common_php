@@ -20,15 +20,10 @@ namespace BayrellCommon\Types;
 use Runtime\rtl;
 use Runtime\Map;
 use Runtime\Vector;
+use Runtime\IntrospectionInfo;
 use Runtime\CoreObject;
 class Pipe extends CoreObject{
 	public $pipe;
-	public function getClassName(){return "BayrellCommon.Types.Pipe";}
-	public static function getParentClassName(){return "Runtime.CoreObject";}
-	protected function _init(){
-		parent::_init();
-		$this->pipe = null;
-	}
 	/**
 	 * Constructor
 	 */
@@ -83,5 +78,12 @@ class Pipe extends CoreObject{
 		return $this->pipe->reduce(function ($res, $item){
 			return $item($res);
 		}, $obj);
+	}
+	/* ======================= Class Init Functions ======================= */
+	public function getClassName(){return "BayrellCommon.Types.Pipe";}
+	public static function getParentClassName(){return "Runtime.CoreObject";}
+	protected function _init(){
+		parent::_init();
+		$this->pipe = null;
 	}
 }

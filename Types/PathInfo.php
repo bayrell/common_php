@@ -20,6 +20,7 @@ namespace BayrellCommon\Types;
 use Runtime\rtl;
 use Runtime\Map;
 use Runtime\Vector;
+use Runtime\IntrospectionInfo;
 use Runtime\Interfaces\StringInterface;
 class PathInfo implements StringInterface{
 	public $filepath;
@@ -27,6 +28,13 @@ class PathInfo implements StringInterface{
 	public $basename;
 	public $extension;
 	public $filename;
+	/**
+	 * Returns string
+	 */
+	function toString(){
+		return $this->filepath;
+	}
+	/* ======================= Class Init Functions ======================= */
 	public function getClassName(){return "BayrellCommon.Types.PathInfo";}
 	public static function getParentClassName(){return "";}
 	protected function _init(){
@@ -35,11 +43,5 @@ class PathInfo implements StringInterface{
 		$this->basename = "";
 		$this->extension = "";
 		$this->filename = "";
-	}
-	/**
-	 * Returns string
-	 */
-	function toString(){
-		return $this->filepath;
 	}
 }

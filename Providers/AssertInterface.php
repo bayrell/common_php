@@ -20,6 +20,7 @@ namespace BayrellCommon\Providers;
 use Runtime\rtl;
 use Runtime\Map;
 use Runtime\Vector;
+use Runtime\IntrospectionInfo;
 /**
  * Provider "default:assert" 
  */
@@ -66,4 +67,5 @@ interface AssertInterface{
 	 * @param Object prev - Previous error
 	 */
 	function checkExists($value, $message = "", $prev = null);
+	/* ======================= Class Init Functions ======================= */
 }

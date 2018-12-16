@@ -20,6 +20,7 @@ namespace BayrellCommon\System;
 use Runtime\rtl;
 use Runtime\Map;
 use Runtime\Vector;
+use Runtime\IntrospectionInfo;
 interface StreamInterface{
 	/**
 	 * Returns if can read from stream
@@ -64,4 +65,5 @@ interface StreamInterface{
 	 * @return int count bytes of successfully written
 	 */
 	function writeBytes($data);
+	/* ======================= Class Init Functions ======================= */
 }

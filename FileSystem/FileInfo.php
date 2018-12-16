@@ -20,8 +20,10 @@ namespace BayrellCommon\FileSystem;
 use Runtime\rtl;
 use Runtime\Map;
 use Runtime\Vector;
+use Runtime\IntrospectionInfo;
 class FileInfo{
 	public $path;
+	/* ======================= Class Init Functions ======================= */
 	public function getClassName(){return "BayrellCommon.FileSystem.FileInfo";}
 	public static function getParentClassName(){return "";}
 	protected function _init(){

@@ -20,7 +20,9 @@ namespace BayrellCommon;
 use Runtime\rtl;
 use Runtime\Map;
 use Runtime\Vector;
+use Runtime\IntrospectionInfo;
 class CommonConstant{
+	/* ======================= Class Init Functions ======================= */
 	public function getClassName(){return "BayrellCommon.CommonConstant";}
 	public static function getParentClassName(){return "";}
 }

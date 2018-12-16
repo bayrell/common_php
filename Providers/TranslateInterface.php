@@ -20,6 +20,7 @@ namespace BayrellCommon\Providers;
 use Runtime\rtl;
 use Runtime\Map;
 use Runtime\Vector;
+use Runtime\IntrospectionInfo;
 /**
  * Provider "default:translate" 
  */
@@ -38,4 +39,5 @@ interface TranslateInterface{
 	 * Log message
 	 */
 	function translate($message, $params = null, $locale = "");
+	/* ======================= Class Init Functions ======================= */
 }

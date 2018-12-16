@@ -20,6 +20,7 @@ namespace BayrellCommon;
 use Runtime\rtl;
 use Runtime\Map;
 use Runtime\Vector;
+use Runtime\IntrospectionInfo;
 use Runtime\rs;
 use Runtime\ContextObject;
 use Runtime\CoreObject;
@@ -28,8 +29,6 @@ use Runtime\Interfaces\FactoryInterface;
 use BayrellCommon\Exceptions\AssertError;
 use BayrellCommon\Types\PathInfo;
 class Utils{
-	public function getClassName(){return "BayrellCommon.Utils";}
-	public static function getParentClassName(){return "";}
 	/**
 	 * Equals value1 and value2. Throw exception if value1 != value2
 	 * @param var value1
@@ -120,4 +119,7 @@ class Utils{
 		});
 		return rs::implode($ch, $source);
 	}
+	/* ======================= Class Init Functions ======================= */
+	public function getClassName(){return "BayrellCommon.Utils";}
+	public static function getParentClassName(){return "";}
 }

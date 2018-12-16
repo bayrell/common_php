@@ -20,18 +20,20 @@ namespace BayrellCommon\Exceptions;
 use Runtime\rtl;
 use Runtime\Map;
 use Runtime\Vector;
+use Runtime\IntrospectionInfo;
 use Runtime\rtl;
 use Runtime\Utils;
 use Runtime\RuntimeConstant;
 use Runtime\Exceptions\RuntimeException;
 use Runtime\Interfaces\ContextInterface;
 class AssertError extends RuntimeException{
-	public function getClassName(){return "BayrellCommon.Exceptions.AssertError";}
-	public static function getParentClassName(){return "Runtime.Exceptions.RuntimeException";}
-	function __construct($context, $message, $prev = null){
+	function __construct($message, $context, $prev = null){
 		if ($message == ""){
 			$message = Utils::translate("ERROR_ASSERT", null, "", $context);
 		}
-		parent::__construct($context, $message, RuntimeConstant::ERROR_ASSERT, $prev);
+		parent::__construct($message, RuntimeConstant::ERROR_ASSERT, $context, $prev);
 	}
+	/* ======================= Class Init Functions ======================= */
+	public function getClassName(){return "BayrellCommon.Exceptions.AssertError";}
+	public static function getParentClassName(){return "Runtime.Exceptions.RuntimeException";}
 }

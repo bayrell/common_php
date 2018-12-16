@@ -20,6 +20,7 @@ namespace BayrellCommon\Providers;
 use Runtime\rtl;
 use Runtime\Map;
 use Runtime\Vector;
+use Runtime\IntrospectionInfo;
 interface SerializeStringInterface{
 	/**
 	 * Convert object to string
@@ -71,4 +72,5 @@ interface SerializeStringInterface{
 	 * @return string
 	 */
 	function getCRLF();
+	/* ======================= Class Init Functions ======================= */
 }
