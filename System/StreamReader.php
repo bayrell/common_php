@@ -17,10 +17,14 @@
  *  limitations under the License.
  */
 namespace BayrellCommon\System;
+use Runtime\rs;
 use Runtime\rtl;
 use Runtime\Map;
 use Runtime\Vector;
+use Runtime\Dict;
+use Runtime\Collection;
 use Runtime\IntrospectionInfo;
+use Runtime\UIStruct;
 use Runtime\CoreObject;
 class StreamReader extends CoreObject{
 	protected $stream;
@@ -86,15 +90,14 @@ class StreamReader extends CoreObject{
 			$buffer = $this->stream->readBytes($buffer_length);
 			$res->appendVector($buffer);
 		}
-		$s = $Utils::bytesToString($res, $this->charset);
+		$s = (new \Runtime\Callback($Utils->getClassName(), "bytesToString"))($res, $this->charset);
 		return $s;
 	}
 	/* ======================= Class Init Functions ======================= */
 	public function getClassName(){return "BayrellCommon.System.StreamReader";}
+	public static function getCurrentClassName(){return "BayrellCommon.System.StreamReader";}
 	public static function getParentClassName(){return "Runtime.CoreObject";}
 	protected function _init(){
 		parent::_init();
-		$this->stream = null;
-		$this->charset = "utf8";
 	}
 }

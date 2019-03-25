@@ -17,10 +17,14 @@
  *  limitations under the License.
  */
 namespace BayrellCommon;
+use Runtime\rs;
 use Runtime\rtl;
 use Runtime\Map;
 use Runtime\Vector;
+use Runtime\Dict;
+use Runtime\Collection;
 use Runtime\IntrospectionInfo;
+use Runtime\UIStruct;
 use Runtime\rs;
 use Runtime\ContextObject;
 use Runtime\CoreObject;
@@ -69,7 +73,7 @@ class Utils{
 	 * @return {string} полное имя файла
 	 */
 	static function basename($filepath){
-		$ret = static::pathinfo($filepath);
+		$ret = (new \Runtime\Callback(self::class, "pathinfo"))($filepath);
 		$res = $ret->basename;
 		return $res;
 	}
@@ -79,7 +83,7 @@ class Utils{
 	 * @return {string} расширение файла
 	 */
 	static function extname($filepath){
-		$ret = static::pathinfo($filepath);
+		$ret = (new \Runtime\Callback(self::class, "pathinfo"))($filepath);
 		$res = $ret->extension;
 		return $res;
 	}
@@ -89,7 +93,7 @@ class Utils{
 	 * @return {string} путь к папке, содержащий файл
 	 */
 	static function dirname($filepath){
-		$ret = static::pathinfo($filepath);
+		$ret = (new \Runtime\Callback(self::class, "pathinfo"))($filepath);
 		$res = $ret->dirname;
 		return $res;
 	}
@@ -121,5 +125,6 @@ class Utils{
 	}
 	/* ======================= Class Init Functions ======================= */
 	public function getClassName(){return "BayrellCommon.Utils";}
+	public static function getCurrentClassName(){return "BayrellCommon.Utils";}
 	public static function getParentClassName(){return "";}
 }

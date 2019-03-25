@@ -17,12 +17,17 @@
  *  limitations under the License.
  */
 namespace BayrellCommon;
+use Runtime\rs;
 use Runtime\rtl;
 use Runtime\Map;
 use Runtime\Vector;
+use Runtime\Dict;
+use Runtime\Collection;
 use Runtime\IntrospectionInfo;
+use Runtime\UIStruct;
 class CommonConstant{
 	/* ======================= Class Init Functions ======================= */
 	public function getClassName(){return "BayrellCommon.CommonConstant";}
+	public static function getCurrentClassName(){return "BayrellCommon.CommonConstant";}
 	public static function getParentClassName(){return "";}
 }

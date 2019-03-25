@@ -17,16 +17,20 @@
  *  limitations under the License.
  */
 namespace BayrellCommon\FileSystem;
+use Runtime\rs;
 use Runtime\rtl;
 use Runtime\Map;
 use Runtime\Vector;
+use Runtime\Dict;
+use Runtime\Collection;
 use Runtime\IntrospectionInfo;
+use Runtime\UIStruct;
 class FileInfo{
 	public $path;
 	/* ======================= Class Init Functions ======================= */
 	public function getClassName(){return "BayrellCommon.FileSystem.FileInfo";}
+	public static function getCurrentClassName(){return "BayrellCommon.FileSystem.FileInfo";}
 	public static function getParentClassName(){return "";}
 	protected function _init(){
-		$this->path = "";
 	}
 }

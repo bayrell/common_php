@@ -17,10 +17,14 @@
  *  limitations under the License.
  */
 namespace BayrellCommon\Exceptions;
+use Runtime\rs;
 use Runtime\rtl;
 use Runtime\Map;
 use Runtime\Vector;
+use Runtime\Dict;
+use Runtime\Collection;
 use Runtime\IntrospectionInfo;
+use Runtime\UIStruct;
 use Runtime\rtl;
 use Runtime\Utils;
 use Runtime\RuntimeConstant;
@@ -35,5 +39,6 @@ class AssertError extends RuntimeException{
 	}
 	/* ======================= Class Init Functions ======================= */
 	public function getClassName(){return "BayrellCommon.Exceptions.AssertError";}
+	public static function getCurrentClassName(){return "BayrellCommon.Exceptions.AssertError";}
 	public static function getParentClassName(){return "Runtime.Exceptions.RuntimeException";}
 }

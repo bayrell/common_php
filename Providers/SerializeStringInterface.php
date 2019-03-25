@@ -17,10 +17,14 @@
  *  limitations under the License.
  */
 namespace BayrellCommon\Providers;
+use Runtime\rs;
 use Runtime\rtl;
 use Runtime\Map;
 use Runtime\Vector;
+use Runtime\Dict;
+use Runtime\Collection;
 use Runtime\IntrospectionInfo;
+use Runtime\UIStruct;
 interface SerializeStringInterface{
 	/**
 	 * Convert object to string

@@ -2,7 +2,7 @@
 	"name": "bayrell/common",
 	"type": "library",
 	"description": "Bayrell Common",
-	"version": "0.6.0",
+	"version": "0.7.1",
 	"authors": [
 		{
 			"name": "Ildar Bikmamatov",
