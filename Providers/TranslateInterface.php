@@ -43,5 +43,4 @@ interface TranslateInterface{
 	 * Log message
 	 */
 	function translate($message, $params = null, $locale = "");
-	/* ======================= Class Init Functions ======================= */
 }

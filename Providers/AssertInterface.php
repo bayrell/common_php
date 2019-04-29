@@ -71,5 +71,4 @@ interface AssertInterface{
 	 * @param Object prev - Previous error
 	 */
 	function checkExists($value, $message = "", $prev = null);
-	/* ======================= Class Init Functions ======================= */
 }

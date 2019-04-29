@@ -77,5 +77,4 @@ interface FileSystemInterface{
 	 * @param boolean 
 	 */
 	function isDir($path);
-	/* ======================= Class Init Functions ======================= */
 }

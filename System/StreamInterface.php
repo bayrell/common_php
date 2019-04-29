@@ -69,5 +69,4 @@ interface StreamInterface{
 	 * @return int count bytes of successfully written
 	 */
 	function writeBytes($data);
-	/* ======================= Class Init Functions ======================= */
 }

@@ -76,5 +76,4 @@ interface SerializeStringInterface{
 	 * @return string
 	 */
 	function getCRLF();
-	/* ======================= Class Init Functions ======================= */
 }

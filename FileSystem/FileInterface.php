@@ -38,5 +38,4 @@ interface FileInterface{
 	 * Close files
 	 */
 	function close();
-	/* ======================= Class Init Functions ======================= */
 }

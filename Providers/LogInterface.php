@@ -37,5 +37,4 @@ interface LogInterface{
 	 * Log exception
 	 */
 	function logException($level, $module_name, $e);
-	/* ======================= Class Init Functions ======================= */
 }

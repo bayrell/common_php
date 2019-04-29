@@ -41,4 +41,14 @@ class AssertError extends RuntimeException{
 	public function getClassName(){return "BayrellCommon.Exceptions.AssertError";}
 	public static function getCurrentClassName(){return "BayrellCommon.Exceptions.AssertError";}
 	public static function getParentClassName(){return "Runtime.Exceptions.RuntimeException";}
+	public static function getFieldsList($names, $flag=0){
+	}
+	public static function getFieldInfoByName($field_name){
+		return null;
+	}
+	public static function getMethodsList($names){
+	}
+	public static function getMethodInfoByName($method_name){
+		return null;
+	}
 }
